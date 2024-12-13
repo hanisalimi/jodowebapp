@@ -2,7 +2,7 @@
   "name": "jodo-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://hanisalimi.github.io/jodoweb",
+  "homepage": "https://hanisalimi.github.io/jodowebapp",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
