@@ -160,10 +160,15 @@ h1 {
     cursor: pointer; /* Indicate clickable element */
   }
 }
+.d-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .footer {
-  padding-left: 900px;
   font-size: 25px;
 }
+
 .text-kom {
   font-size: 50px;
   font-weight: 800;

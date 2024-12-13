@@ -751,11 +751,10 @@ export default function App() {
 
           if (updatedKhaksArray[index] === 11) {
             // Award points to opposing player at 11 seconds
-            let opposingIndex = index === 0 ? 1 : 0;
+
             setScores((prevScores) => ({
               ...prevScores,
-              [players[opposingIndex].name]:
-                (prevScores[players[opposingIndex].name] || 0) + 3,
+              [playerName]: (prevScores[playerName] || 0) + 3,
             }));
           }
 
@@ -771,11 +770,10 @@ export default function App() {
             //   setShowAlert(true); // Show custom alert
             // }, 500);
             // Award points to opposing player at 15 seconds
-            let opposingIndex = index === 0 ? 1 : 0;
+
             setScores((prevScores) => ({
               ...prevScores,
-              [players[opposingIndex].name]:
-                (prevScores[players[opposingIndex].name] || 0) + 1,
+              [playerName]: (prevScores[playerName] || 0) + 1,
             }));
             clearInterval(intervalId); // Stop after reaching max time.
             // alert(`${players[opposingIndex].name} wins!`);
@@ -1043,11 +1041,9 @@ export default function App() {
           />
         </div>
       </div>
-
       <h1 className="text-center mb-4 text-kom">
         کمیته داوران انجمن دفاع شخصی فدراسیون جودو
       </h1>
-
       {/* Match Timer Display */}
       <div className="text-center mb-4">
         <h1 style={{ fontSize: "85px" }}>
@@ -1561,9 +1557,11 @@ export default function App() {
           </li>
         ))}
       </ul>
-
       {/* Bootstrap Modal for Editing Player */}
-      <p className="footer">تهیه و تنظیم : سهیلا دادخواه و مهرداد معاشری</p>
+      <div className="d-text">
+        {" "}
+        <p className="footer">تهیه و تنظیم : سهیلا دادخواه و مهرداد معاشری</p>
+      </div>
       <div
         className="modal fade"
         id="editModal"
