@@ -9,7 +9,7 @@ export default defineConfig({
   server: { port: 3000 },
   build: {
     rollupOptions: {
-      external: ["bootstrap/dist/css/bootstrap.min.css"],
+      external: ["./bootstrap/dist/css/bootstrap.min.css"],
     },
   },
 });
